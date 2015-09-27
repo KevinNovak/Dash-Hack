@@ -12,7 +12,7 @@ for /f %%A in ('"prompt $H &echo on &for %%B in (1) do rem"') do set BS=%%A
 
 cd C:\Users\kevin\Desktop\wireshark\App\Wireshark
 
-start tshark -i 4 -p -w C:\Users\kevin\Desktop\hello.txt host 255.255.255.255
+start tshark -i 4 -p -w %TEMP%\dashlisten.txt host 255.255.255.255
 
 ping 1.1.1.1 -n 1 -w 3000 > nul
 
@@ -21,7 +21,7 @@ set file="C:\Users\kevin\Desktop\hello.txt"
 set oldSize=276
 :_loop
 ping 1.1.1.1 -n 1 -w 1500 > nul
-FOR /F "usebackq" %%A IN ('%file%') DO set size=%%~zA
+FOR /F "usebackq" %%A IN ('%TEMP%\dashlisten.txt') DO set size=%%~zA
 
 if %size% GTR %oldsize% (
     echo Button Pushed.
@@ -31,7 +31,7 @@ if %size% GTR %oldsize% (
 goto _loop
 
 :_playsound
-cd C:\Users\Kevin\Documents\GitHub\Dash-Hack\resources
+cd %0\..\
 sWavPlayer.exe rickroll.wav
 goto _loop
 
