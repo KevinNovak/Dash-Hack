@@ -10,8 +10,6 @@ title Dash Hack
 :: define a variable containing a single backspace character
 for /f %%A in ('"prompt $H &echo on &for %%B in (1) do rem"') do set BS=%%A
 
-cd C:\Users\kevin\Desktop\wireshark\App\Wireshark
-
 start tshark -i 4 -p -w %TEMP%\dashlisten.txt host 255.255.255.255 and 192.168.0.1
 
 ping 1.1.1.1 -n 1 -w 3000 > nul
@@ -19,7 +17,7 @@ ping 1.1.1.1 -n 1 -w 3000 > nul
 setlocal
 set oldSize=500
 :_loop
-ping 1.1.1.1 -n 1 -w 2000 > nul
+ping 1.1.1.1 -n 1 -w 4000 > nul
 FOR /F "usebackq" %%A IN ('%TEMP%\dashlisten.txt') DO set size=%%~zA
 
 if %size% GTR %oldsize% (
@@ -29,7 +27,7 @@ if %size% GTR %oldsize% (
 goto _loop
 
 :_playsound
-C:\Users\Kevin\Documents\GitHub\Dash-Hack\resources\sWavPlayer.exe C:\Users\Kevin\Documents\GitHub\Dash-Hack\resources\rickroll.wav
+sWavPlayer.exe rickroll.wav
 set oldSize=%size%
 goto _loop
 
