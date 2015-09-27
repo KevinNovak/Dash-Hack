@@ -1,0 +1,3 @@
+cd C:\Users\kevin\Desktop\wireshark\App\Wireshark
+
+tshark -i 4 -p -w C:\Users\kevin\Desktop\hello.txt host 255.255.255.255
