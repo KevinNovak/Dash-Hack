@@ -26,7 +26,13 @@ FOR /F "usebackq" %%A IN ('%file%') DO set size=%%~zA
 if %size% GTR %oldsize% (
     echo Button Pushed.
     set oldSize=%size%
+    goto _playsound
 )
+goto _loop
+
+:_playsound
+cd C:\Users\Kevin\Documents\GitHub\Dash-Hack\resources
+sWavPlayer.exe rickroll.wav
 goto _loop
 
 pause
