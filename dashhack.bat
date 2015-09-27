@@ -14,22 +14,18 @@ cd C:\Users\kevin\Desktop\wireshark\App\Wireshark
 
 start tshark -i 4 -p -w C:\Users\kevin\Desktop\hello.txt host 255.255.255.255
 
-echo.
-echo test
-echo.
+ping 1.1.1.1 -n 1 -w 3000 > nul
 
 setlocal
 set file="C:\Users\kevin\Desktop\hello.txt"
-set oldSize=0
+set oldSize=276
 :_loop
-ping 1.1.1.1 -n 1 -w 600 > nul
+ping 1.1.1.1 -n 1 -w 1500 > nul
 FOR /F "usebackq" %%A IN ('%file%') DO set size=%%~zA
 
 if %size% GTR %oldsize% (
-    echo changed
+    echo Button Pushed.
     set oldSize=%size%
-) ELSE (
-    echo no change
 )
 goto _loop
 
