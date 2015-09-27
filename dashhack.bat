@@ -31,8 +31,7 @@ if %size% GTR %oldsize% (
 goto _loop
 
 :_playsound
-cd %0\..\
-sWavPlayer.exe rickroll.wav
+C:\Users\Kevin\Documents\GitHub\Dash-Hack\resources\sWavPlayer.exe C:\Users\Kevin\Documents\GitHub\Dash-Hack\resources\rickroll.wav
 goto _loop
 
 pause
