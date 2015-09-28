@@ -11,18 +11,17 @@ start tshark -i 4 -p -w %TEMP%\dashlisten.txt host 255.255.255.255 and 192.168.0
 echo Please ^Wait
 ping 1.1.1.1 -n 1 -w 3000 > nul
 echo Begin
-FOR /F "usebackq" %%A IN ('%TEMP%\dashlisten.txt') DO set defaultsize=%%~zA
 
 :_loop
 FOR /F "usebackq" %%A IN ('%TEMP%\dashlisten.txt') DO set size=%%~zA
-if %size% GTR %defaultsize% (
-    start sWavPlayer.exe rickroll.wav
+if %size% GTR 294 (
+    start sWavPlayer.exe johncena.wav
     taskkill /f /im tshark.exe
     start tshark -i 4 -p -w %TEMP%\dashlisten.txt host 255.255.255.255 and 192.168.0.1
     ping 1.1.1.1 -n 1 -w 18000 > nul
     goto _loop
 )
-ping 1.1.1.1 -n 1 -w 600 > nul
+ping 1.1.1.1 -n 1 -w 300 > nul
 goto _loop
 
 pause
