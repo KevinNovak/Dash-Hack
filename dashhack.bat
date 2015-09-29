@@ -1,6 +1,6 @@
 :: Dash Hack - Hacking the Amazon Dash to run a batch file
 :: Code by: Kevin Novak
-:: Last Edited: 9/27/2015
+:: Last Edited: 9/28/2015
 :: Version: 0.0.0.0
 
 @echo off
@@ -10,8 +10,9 @@ title Dash Hack
 :: ==========================================
 :: Variables
 :: ==========================================
-set sourceIP=192.168.0.1
-set destinationIP=255.255.255.255
+:: Replace the folowing with the appropriate values
+set sourceIP=0.0.0.0
+set destinationIP=0.0.0.0
 
 :: ==========================================
 :: Dialog
