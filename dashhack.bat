@@ -1,7 +1,7 @@
 :: Dash Hack - Hacking the Amazon Dash to run a batch file
 :: Code by: Kevin Novak
 :: Last Edited: 9/28/2015
-:: Version: 0.0.0.0
+:: Version: 1.0.0.0
 
 @echo off
 
