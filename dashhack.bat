@@ -7,21 +7,18 @@
 
 title Dash Hack
 
-start tshark -i 4 -p -w %TEMP%\dashlisten.txt host 255.255.255.255 and 192.168.0.1
-echo Please ^Wait
-ping 1.1.1.1 -n 1 -w 3000 > nul
-echo Begin
-
 :_loop
-FOR /F "usebackq" %%A IN ('%TEMP%\dashlisten.txt') DO set size=%%~zA
-if %size% GTR 294 (
-    start sWavPlayer.exe johncena.wav
-    taskkill /f /im tshark.exe
-    start tshark -i 4 -p -w %TEMP%\dashlisten.txt host 255.255.255.255 and 192.168.0.1
-    ping 1.1.1.1 -n 1 -w 18000 > nul
-    goto _loop
-)
-ping 1.1.1.1 -n 1 -w 300 > nul
+tshark -c 1 -i 4 -p host 255.255.255.255 and 192.168.0.1
+
+:: ==========================================
+:: Perform Action
+:: ==========================================
+start sWavPlayer.exe johncena.wav
+ping 1.1.1.1 -n 1 -w 13000 > nul
+
+
+
+
 goto _loop
 
 pause
