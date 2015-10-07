@@ -24,7 +24,7 @@ echo   Listening for Amazon Dash...
 :: Begin Loop
 :: ==========================================
 :_loop
-tshark -c 1 -i 4 -p host %sourceIP% and %destinationIP%> NUL 2>&1
+wireshark\tshark -c 1 -i 4 -p host %sourceIP% and %destinationIP%> NUL 2>&1
 
 :: ==========================================
 :: Perform Action
