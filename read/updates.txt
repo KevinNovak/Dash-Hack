@@ -1,5 +1,11 @@
 ======================================================
 Dash-Hack - Updates (tabbed items are complete)
 ======================================================
+publish how to
+ask for github hearts
+read me setup
+wireshark back in resources
+/resources and /resources/wireshark prefix
+use 7-zip exe
 	more effective delays
 	everything stored in temp

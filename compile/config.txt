@@ -1,0 +1,4 @@
+;!@Install@!UTF-8!
+Title="Dash Hack"
+RunProgram="checkout.bat"
+;!@InstallEnd@!
